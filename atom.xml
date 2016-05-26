@@ -4,7 +4,7 @@
   <title><![CDATA[孙宁海的博客]]></title>
   <link href="http://sunninghai.github.io/atom.xml" rel="self"/>
   <link href="http://sunninghai.github.io/"/>
-  <updated>2016-05-26T09:40:43+08:00</updated>
+  <updated>2016-05-26T09:42:39+08:00</updated>
   <id>http://sunninghai.github.io/</id>
   <author>
     <name><![CDATA[孙宁海]]></name>
@@ -12,14 +12,5 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[我的测试文章]]></title>
-    <link href="http://sunninghai.github.io/blog/2016/05/25/wo-de-ce-shi-wen-zhang/"/>
-    <updated>2016-05-25T20:33:45+08:00</updated>
-    <id>http://sunninghai.github.io/blog/2016/05/25/wo-de-ce-shi-wen-zhang</id>
-    <content type="html"><![CDATA[<p>这是一个测试而已</p>
-]]></content>
-  </entry>
   
 </feed>
