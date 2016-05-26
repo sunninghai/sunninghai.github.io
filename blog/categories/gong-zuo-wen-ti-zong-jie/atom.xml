@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 工作问题总结 | 孙宁海的博客]]></title>
+  <link href="http://sunninghai.github.io/blog/categories/gong-zuo-wen-ti-zong-jie/atom.xml" rel="self"/>
+  <link href="http://sunninghai.github.io/"/>
+  <updated>2016-05-26T17:40:25+08:00</updated>
+  <id>http://sunninghai.github.io/</id>
+  <author>
+    <name><![CDATA[孙宁海]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[工作问题总结－01]]></title>
+    <link href="http://sunninghai.github.io/blog/2016/05/26/gong-zuo-wen-ti-zong-jie-%5Bnil%5D01/"/>
+    <updated>2016-05-26T17:36:44+08:00</updated>
+    <id>http://sunninghai.github.io/blog/2016/05/26/gong-zuo-wen-ti-zong-jie-[nil]01</id>
+    <content type="html"><![CDATA[<h1>service层参数或者返回值验证</h1>
+
+<p>需要在service类上添加注解@Validated,会抛出ConstraintViolationException异常</p>
+
+<h1>restClient 返回实体类List</h1>
+
+<p>默认返回的是List<Map>,需要从Map转化成实体类</p>
+
+<pre><code>public List listExamByClassId(String classId, String loginUserId,String tenantId) 
+{
+        return getList("/exam/class/{classId}?loginUserId={userId}&amp;tenantId={tenantId}", new ParameterizedTypeReference&lt;List&lt;Exam&gt;&gt;() {
+        },classId,loginUserId,tenantId);
+    }
+</code></pre>
+
+<h1>BigDecimal精度问题</h1>
+
+<p>restTemplate 返回数据反序列化时，默认情况下BigDecimal 直接转换成Double,需要自定义实现ObjectMapper</p>
+
+<pre><code>&lt;bean id="restTemplate" class="org.springframework.web.client.RestTemplate"&gt;
+        &lt;constructor-arg ref="clientHttpRequestFactory"/&gt;
+        &lt;property name="errorHandler" ref="responseErrorHandler"&gt;
+        &lt;/property&gt;
+        &lt;property name="messageConverters"&gt;
+            &lt;list&gt;
+                &lt;bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"&gt;
+                    &lt;constructor-arg ref="objectMapper"/&gt;
+                &lt;/bean&gt;
+                &lt;bean class="org.springframework.http.converter.StringHttpMessageConverter"&gt;
+                &lt;property name="supportedMediaTypes"&gt;
+                        &lt;list&gt;
+                            &lt;value&gt;text/plain;charset=UTF-8&lt;/value&gt;
+                        &lt;/list&gt;
+                    &lt;/property&gt;
+
+
+
+                &lt;/bean&gt;
+            &lt;/list&gt;
+        &lt;/property&gt;
+        &lt;property name="interceptors"&gt;
+            &lt;bean class="com.gxb.sites.client.sys.UserAgentHeaderHttpInterceptor"&gt;
+            &lt;/bean&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
+
+public class MyObjectMapper extends ObjectMapper {
+    private static final long serialVersionUID = -780913908269501532L;
+
+    public MyObjectMapper(){
+        super();
+
+
+        enable(DeserializationFeature.USE_BIG_DECIMAL_FOR_FLOATS);
+        //config to ignore unknown property
+    }
+}
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
