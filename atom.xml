@@ -4,7 +4,7 @@
   <title><![CDATA[孙宁海的博客]]></title>
   <link href="http://sunninghai.github.io/atom.xml" rel="self"/>
   <link href="http://sunninghai.github.io/"/>
-  <updated>2016-05-26T17:40:25+08:00</updated>
+  <updated>2016-06-07T18:17:04+08:00</updated>
   <id>http://sunninghai.github.io/</id>
   <author>
     <name><![CDATA[孙宁海]]></name>
@@ -121,58 +121,6 @@
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[测试]]></title>
-    <link href="http://sunninghai.github.io/blog/2016/05/26/ce-shi/"/>
-    <updated>2016-05-26T10:11:46+08:00</updated>
-    <id>http://sunninghai.github.io/blog/2016/05/26/ce-shi</id>
-    <content type="html"><![CDATA[<h1>一级标题</h1>
-
-<h2>二级标题</h2>
-
-<blockquote><p>这是注释<em>斜体</em><em>还是斜体</em>
-接下来是粗体<strong>粗体但是不粗啊</strong></p></blockquote>
-
-<p>ddsds</p>
-
-<blockquote><p>这是个什么鬼啊</p>
-
-<blockquote><p>鬼知道<br/>
-什么玩意<br/>
-this is an <a href="http://www.baidu.com" title="百度">example link</a><br/>
-<a href="http://www.baidu.com" title="Google">百度</a>
-<a href="http://www.google.com" title="Google">谷歌</a>
-this is a picture <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="title text" alt="alte text" /></p></blockquote></blockquote>
-
-<hr />
-
-<hr />
-
-<hr />
-
-<ol>
-<li><p>列表1</p>
-
-<ul>
-<li>子项1</li>
-<li>子项2</li>
-<li>子项3</li>
-</ul>
-</li>
-<li><p>列表2</p></li>
-<li><p>列表3</p></li>
-<li><p>无序1</p></li>
-<li>dd</li>
-<li>dsdd</li>
-<li>无序2</li>
-<li>无序3</li>
-</ol>
-
-
-<p>|参数名|类型</p>
 ]]></content>
   </entry>
   
