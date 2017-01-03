@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://sunninghai.github.io/blog/2017/01/03/mysqlzhu-yi/</loc>
+<lastmod>2017-01-03T19:25:28+08:00</lastmod>
+</url>
+<url>
+<loc>http://sunninghai.github.io/blog/2016/06/07/everyday/</loc>
+<lastmod>2016-06-07T18:26:07+08:00</lastmod>
+</url>
+<url>
 <loc>http://sunninghai.github.io/blog/2016/05/26/gong-zuo-wen-ti-zong-jie-%255Bnil%255D01/</loc>
 <lastmod>2016-05-26T17:36:44+08:00</lastmod>
 </url>
@@ -12,5 +20,11 @@
 </url>
 <url>
 <loc>http://sunninghai.github.io/blog/categories/gong-zuo-wen-ti-zong-jie/</loc>
+</url>
+<url>
+<loc>http://sunninghai.github.io/blog/categories/fen-bu-shi-pei-zhi-disconf/</loc>
+</url>
+<url>
+<loc>http://sunninghai.github.io/blog/categories/mysql/</loc>
 </url>
 </urlset>
