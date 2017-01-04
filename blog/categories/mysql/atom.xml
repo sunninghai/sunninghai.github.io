@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Mysql | 搬运工]]></title>
+  <title><![CDATA[Category: mysql | 搬运工]]></title>
   <link href="http://sunninghai.github.io/blog/categories/mysql/atom.xml" rel="self"/>
   <link href="http://sunninghai.github.io/"/>
-  <updated>2017-01-04T15:56:33+08:00</updated>
+  <updated>2017-01-04T16:03:04+08:00</updated>
   <id>http://sunninghai.github.io/</id>
   <author>
     <name><![CDATA[孙宁海]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Mysql注意]]></title>
+    <title type="html"><![CDATA[mysql注意]]></title>
     <link href="http://sunninghai.github.io/blog/2017/01/03/mysqlzhu-yi/"/>
     <updated>2017-01-03T19:25:28+08:00</updated>
     <id>http://sunninghai.github.io/blog/2017/01/03/mysqlzhu-yi</id>
