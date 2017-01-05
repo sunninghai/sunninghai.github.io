@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://sunninghai.github.io/blog/2017/01/04/xing-neng-you-hua-zong-jie/</loc>
+<lastmod>2017-01-04T17:42:19+08:00</lastmod>
+</url>
+<url>
 <loc>http://sunninghai.github.io/blog/2017/01/04/ideachang-yong-cha-jian/</loc>
 <lastmod>2017-01-04T15:14:25+08:00</lastmod>
 </url>
@@ -33,5 +37,8 @@
 </url>
 <url>
 <loc>http://sunninghai.github.io/blog/categories/gong-ju/</loc>
+</url>
+<url>
+<loc>http://sunninghai.github.io/blog/categories/xing-neng/</loc>
 </url>
 </urlset>
