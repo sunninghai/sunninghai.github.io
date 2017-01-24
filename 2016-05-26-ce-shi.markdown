@@ -1,0 +1,48 @@
+---
+layout: post
+title: "测试"
+date: 2016-05-26 10:11:46 +0800
+comments: true
+categories: 
+---
+#一级标题
+## 二级标题
+>这是注释*斜体*_还是斜体_
+>接下来是粗体**粗体但是不粗啊**
+
+ddsds
+
+>这是个什么鬼啊    
+> > 
+> > 鬼知道  
+什么玩意  
+this is an [example link](http://www.baidu.com "百度")  
+[百度][1]
+[谷歌][2]
+[1]:http://www.baidu.com "Google"
+[2]:http://www.google.com "Google"
+
+this is a picture ![alte text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "title text")
+
+***
+* * *
+- - -
+
+
+1. 列表1
+   - 子项1
+   - 子项2
+   - 子项3
+  
+2. 列表2
+3. 列表3
+
+* 无序1
+* dd
+ * dsdd
+* 无序2
+* 无序3
+
+|参数名|类型
+ 
+

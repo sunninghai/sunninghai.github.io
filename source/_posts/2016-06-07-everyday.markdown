@@ -1,0 +1,12 @@
+---
+layout: post
+title: "everyday"
+date: 2016-06-07 18:26:07 +0800
+comments: true
+categories: 分布式配置disconf
+---
+# 为什么需要分布式配置
+
+##背景
+
+
