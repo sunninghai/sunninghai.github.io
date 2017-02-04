@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Code | 零零碎碎，点点积累]]></title>
+  <link href="http://sunninghai.github.io/blog/categories/code/atom.xml" rel="self"/>
+  <link href="http://sunninghai.github.io/"/>
+  <updated>2017-02-04T16:02:19+08:00</updated>
+  <id>http://sunninghai.github.io/</id>
+  <author>
+    <name><![CDATA[sunninghai]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[代码中特殊的注释]]></title>
+    <link href="http://sunninghai.github.io/blog/2017/02/04/dai-ma-zhong-te-shu-de-zhu-shi/"/>
+    <updated>2017-02-04T15:48:35+08:00</updated>
+    <id>http://sunninghai.github.io/blog/2017/02/04/dai-ma-zhong-te-shu-de-zhu-shi</id>
+    <content type="html"><![CDATA[<p>主要说一下以下三个代码中常见的特殊注释：</p>
+
+<p>TODO : 说明标识处有功能代码需要编写，待实现功能说明中简略说明</p>
+
+<p>FIXME : 标识处代码需要修正，甚至代码是错误的，不能工作，如何修正在说明中简要说明</p>
+
+<p>XXX : 标识代码虽然实现了功能，但是实现的方法有待商榷，希望将来能改进，要改进的地方在说明中简要说明</p>
+]]></content>
+  </entry>
+  
+</feed>
