@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Idea | 零零碎碎，点点积累]]></title>
+  <link href="http://sunninghai.github.io/blog/categories/idea/atom.xml" rel="self"/>
+  <link href="http://sunninghai.github.io/"/>
+  <updated>2017-02-04T10:22:36+08:00</updated>
+  <id>http://sunninghai.github.io/</id>
+  <author>
+    <name><![CDATA[sunninghai]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Happy New Year]]></title>
+    <link href="http://sunninghai.github.io/blog/2017/02/03/happy-new-year/"/>
+    <updated>2017-02-03T15:08:05+08:00</updated>
+    <id>http://sunninghai.github.io/blog/2017/02/03/happy-new-year</id>
+    <content type="html"><![CDATA[<p>mac 下IDEA 常用快捷键</p>
+
+<h3>编辑类</h3>
+
+<p>⌃O 覆盖方法（重写父类方法）
+⌃I 实现方法（实现接口中的方法）
+⌘⌥T 包围代码（使用if..else, try..catch, for, synchronized等包围选中的代码）
+⌥↑ 连续选中代码块
+⌥↓ 减少当前选中的代码块
+⌘⌥L 格式化代码
+⌘+ / ⌘- 展开 / 折叠代码块
+⌘⇧+ 展开所以代码块
+⌘⇧- 折叠所有代码块
+⌘W 关闭活动的编辑器选项卡</p>
+
+<p>⌘O 查找类文件
+⌘U 打开父类
+⌘B 跳到类型声明处
+⌘⇧B 跳到类型文件
+⌘⌥ 鼠标  ⌘⌥ B ： 跳转到具体实现</p>
+
+<p>⌘f12 查看文件结构
+F2 / ⇧F2 跳转到下一个/上一个突出错误或警告的位置
+F4 / ⌘↓ 编辑/查看代码源</p>
+
+<h3>重构</h3>
+
+<p>F5 复制文件到指定目录
+⇧F6 重命名文件</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Idea常用插件]]></title>
+    <link href="http://sunninghai.github.io/blog/2017/01/04/ideachang-yong-cha-jian/"/>
+    <updated>2017-01-04T15:14:25+08:00</updated>
+    <id>http://sunninghai.github.io/blog/2017/01/04/ideachang-yong-cha-jian</id>
+    <content type="html"><![CDATA[<table>
+<thead>
+<tr>
+<th>插件名称                        </th>
+<th>主要用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Statistic </td>
+<td>代码统计</td>
+</tr>
+<tr>
+<td>JRebel Plugin</td>
+<td>热部署</td>
+</tr>
+<tr>
+<td>CodeGlance</td>
+<td>在编辑代码最右侧，显示一块代码小地图</td>
+</tr>
+<tr>
+<td>MultiMarkdown</td>
+<td>书写Markdown文件</td>
+</tr>
+<tr>
+<td>FindBugs</td>
+<td>Bug检查</td>
+</tr>
+<tr>
+<td>PWD</td>
+<td>java源码检查</td>
+</tr>
+<tr>
+<td>CheckStyle</td>
+<td>代码规范检查</td>
+</tr>
+</tbody>
+</table>
+
+]]></content>
+  </entry>
+  
+</feed>

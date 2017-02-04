@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: 分布式配置disconf | 搬运工]]></title>
+  <title><![CDATA[Category: 分布式配置disconf | 零零碎碎，点点积累]]></title>
   <link href="http://sunninghai.github.io/blog/categories/fen-bu-shi-pei-zhi-disconf/atom.xml" rel="self"/>
   <link href="http://sunninghai.github.io/"/>
-  <updated>2017-01-24T17:13:06+08:00</updated>
+  <updated>2017-02-04T10:22:36+08:00</updated>
   <id>http://sunninghai.github.io/</id>
   <author>
-    <name><![CDATA[孙宁海]]></name>
+    <name><![CDATA[sunninghai]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>

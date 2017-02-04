@@ -1,17 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[搬运工]]></title>
+  <title><![CDATA[零零碎碎，点点积累]]></title>
   <link href="http://sunninghai.github.io/atom.xml" rel="self"/>
   <link href="http://sunninghai.github.io/"/>
-  <updated>2017-01-24T17:13:06+08:00</updated>
+  <updated>2017-02-04T10:22:36+08:00</updated>
   <id>http://sunninghai.github.io/</id>
   <author>
-    <name><![CDATA[孙宁海]]></name>
+    <name><![CDATA[sunninghai]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Happy New Year]]></title>
+    <link href="http://sunninghai.github.io/blog/2017/02/03/happy-new-year/"/>
+    <updated>2017-02-03T15:08:05+08:00</updated>
+    <id>http://sunninghai.github.io/blog/2017/02/03/happy-new-year</id>
+    <content type="html"><![CDATA[<p>mac 下IDEA 常用快捷键</p>
+
+<h3>编辑类</h3>
+
+<p>⌃O 覆盖方法（重写父类方法）
+⌃I 实现方法（实现接口中的方法）
+⌘⌥T 包围代码（使用if..else, try..catch, for, synchronized等包围选中的代码）
+⌥↑ 连续选中代码块
+⌥↓ 减少当前选中的代码块
+⌘⌥L 格式化代码
+⌘+ / ⌘- 展开 / 折叠代码块
+⌘⇧+ 展开所以代码块
+⌘⇧- 折叠所有代码块
+⌘W 关闭活动的编辑器选项卡</p>
+
+<p>⌘O 查找类文件
+⌘U 打开父类
+⌘B 跳到类型声明处
+⌘⇧B 跳到类型文件
+⌘⌥ 鼠标  ⌘⌥ B ： 跳转到具体实现</p>
+
+<p>⌘f12 查看文件结构
+F2 / ⇧F2 跳转到下一个/上一个突出错误或警告的位置
+F4 / ⌘↓ 编辑/查看代码源</p>
+
+<h3>重构</h3>
+
+<p>F5 复制文件到指定目录
+⇧F6 重命名文件</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[集合总结]]></title>
@@ -23,7 +60,7 @@
 <p>原文地址：
 <a href="http://calvin1978.blogcn.com/articles/collection.html">花钱的年华 关于Java集合的小抄</a></p>
 
-<p><img src="../images/%E9%9B%86%E5%90%88%E7%9B%B8%E5%85%B3.png" alt="总结图片" /></p>
+<p><img src="%E9%9B%86%E5%90%88%E7%9B%B8%E5%85%B3.png" alt="总结图片" /></p>
 ]]></content>
   </entry>
   
@@ -138,7 +175,7 @@
 <li>失效：应用程序先从cache取数据，没有得到,数据库中取数据，成功后，放到缓存中。</li>
 <li>命中：应用程序从cache中取数据，取到后返回。</li>
 <li>更新：先把数据存到数据库中，成功后，再让缓存失效. 为什么不直接更新而是失效呢？主要是因为如果两个并发写导致缓存脏数据。如下图
-  <img src="../images/redis1.png" alt="顺序" /></li>
+  <img src="redis1.png" alt="顺序" /></li>
 </ul>
 
 
@@ -190,9 +227,7 @@
     <link href="http://sunninghai.github.io/blog/2017/01/04/ideachang-yong-cha-jian/"/>
     <updated>2017-01-04T15:14:25+08:00</updated>
     <id>http://sunninghai.github.io/blog/2017/01/04/ideachang-yong-cha-jian</id>
-    <content type="html"><![CDATA[<h1>idea 常用插件</h1>
-
-<table>
+    <content type="html"><![CDATA[<table>
 <thead>
 <tr>
 <th>插件名称                        </th>
@@ -374,6 +409,24 @@
 
 
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[测试2]]></title>
+    <link href="http://sunninghai.github.io/blog/2016/05/26/ce-shi-2/"/>
+    <updated>2016-05-26T09:47:06+08:00</updated>
+    <id>http://sunninghai.github.io/blog/2016/05/26/ce-shi-2</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ceshi]]></title>
+    <link href="http://sunninghai.github.io/blog/2016/05/26/ceshi/"/>
+    <updated>2016-05-26T09:45:42+08:00</updated>
+    <id>http://sunninghai.github.io/blog/2016/05/26/ceshi</id>
+    <content type="html"><![CDATA[
 ]]></content>
   </entry>
   

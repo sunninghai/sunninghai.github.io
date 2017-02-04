@@ -5,12 +5,16 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>搬运工</title>
-  <meta name="author" content="孙宁海">
+  <title>零零碎碎，点点积累</title>
+  <meta name="author" content="sunninghai">
 
   
-  <meta name="description" content="Java 集合总结 原文地址：
-花钱的年华 关于Java集合的小抄 ">
+  <meta name="description" content="mac 下IDEA 常用快捷键 编辑类 ⌃O 覆盖方法（重写父类方法）
+⌃I 实现方法（实现接口中的方法）
+⌘⌥T 包围代码（使用if..else, try..catch, for, synchronized等包围选中的代码）
+⌥↑ 连续选中代码块
+⌥↓ 减少当前选中的代码块
+⌘⌥L 格式化代码 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -22,7 +26,7 @@
   <link rel="canonical" href="http://sunninghai.github.io/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="搬运工" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="零零碎碎，点点积累" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
@@ -37,9 +41,7 @@
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">搬运工</a></h1>
-  
-    <h2>虽然low，好歹是自己的；</h2>
+  <h1><a href="/">零零碎碎，点点积累</a></h1>
   
 </hgroup>
 
@@ -72,6 +74,63 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2017/02/03/happy-new-year/">Happy New Year</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2017-02-03T15:08:05+08:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>3</span><span class='date-suffix'>rd</span>, <span class='date-year'>2017</span></span> <span class='time'>3:08 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>mac 下IDEA 常用快捷键</p>
+
+<h3>编辑类</h3>
+
+<p>⌃O 覆盖方法（重写父类方法）
+⌃I 实现方法（实现接口中的方法）
+⌘⌥T 包围代码（使用if..else, try..catch, for, synchronized等包围选中的代码）
+⌥↑ 连续选中代码块
+⌥↓ 减少当前选中的代码块
+⌘⌥L 格式化代码
+⌘+ / ⌘- 展开 / 折叠代码块
+⌘⇧+ 展开所以代码块
+⌘⇧- 折叠所有代码块
+⌘W 关闭活动的编辑器选项卡</p>
+
+<p>⌘O 查找类文件
+⌘U 打开父类
+⌘B 跳到类型声明处
+⌘⇧B 跳到类型文件
+⌘⌥ 鼠标  ⌘⌥ B ： 跳转到具体实现</p>
+
+<p>⌘f12 查看文件结构
+F2 / ⇧F2 跳转到下一个/上一个突出错误或警告的位置
+F4 / ⌘↓ 编辑/查看代码源</p>
+
+<h3>重构</h3>
+
+<p>F5 复制文件到指定目录
+⇧F6 重命名文件</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2017/01/24/ji-he-zong-jie/">集合总结</a></h1>
     
     
@@ -93,7 +152,7 @@
 <p>原文地址：
 <a href="http://calvin1978.blogcn.com/articles/collection.html">花钱的年华 关于Java集合的小抄</a></p>
 
-<p><img src="../images/%E9%9B%86%E5%90%88%E7%9B%B8%E5%85%B3.png" alt="总结图片" /></p>
+<p><img src="%E9%9B%86%E5%90%88%E7%9B%B8%E5%85%B3.png" alt="总结图片" /></p>
 </div>
   
   
@@ -268,7 +327,7 @@
 <li>失效：应用程序先从cache取数据，没有得到,数据库中取数据，成功后，放到缓存中。</li>
 <li>命中：应用程序从cache中取数据，取到后返回。</li>
 <li>更新：先把数据存到数据库中，成功后，再让缓存失效. 为什么不直接更新而是失效呢？主要是因为如果两个并发写导致缓存脏数据。如下图
-  <img src="../images/redis1.png" alt="顺序" /></li>
+  <img src="redis1.png" alt="顺序" /></li>
 </ul>
 
 
@@ -340,9 +399,7 @@
   </header>
 
 
-  <div class="entry-content"><h1>idea 常用插件</h1>
-
-<table>
+  <div class="entry-content"><table>
 <thead>
 <tr>
 <th>插件名称                        </th>
@@ -591,7 +648,38 @@
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2016/05/26/ce-shi-2/">测试2</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-05-26T09:47:06+08:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:47 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
+    
+      <a class="prev" href="/posts/2">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -602,6 +690,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2017/02/03/happy-new-year/">Happy New Year</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2017/01/24/ji-he-zong-jie/">集合总结</a>
@@ -619,10 +711,6 @@
         <a href="/blog/2017/01/04/xing-neng-you-hua-zong-jie/">性能优化策略总结</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2017/01/04/ideachang-yong-cha-jian/">Idea常用插件</a>
-      </li>
-    
   </ul>
 </section>
 
@@ -636,7 +724,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2017 - 孙宁海 -
+  Copyright &copy; 2017 - sunninghai -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
