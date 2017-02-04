@@ -3,10 +3,10 @@ layout: post
 title: "idea常用插件"
 date: 2017-01-04 15:14:25 +0800
 comments: true
-categories: 工具
+categories: IDEA
 ---
 
-#idea 常用插件
+
 
 |插件名称                        |主要用途|
 |-------------------------------|------------------|
