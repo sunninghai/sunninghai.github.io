@@ -3,7 +3,7 @@ layout: post
 title: "集合总结"
 date: 2017-01-24 16:21:56 +0800
 comments: true
-categories: 
+categories: Java
 ---
 
 ## Java 集合总结

@@ -3,7 +3,7 @@ layout: post
 title: "mysql 死锁相关"
 date: 2017-01-10 10:33:18 +0800
 comments: true
-categories: 
+categories: mysql
 ---
 
 ###查询 正在执行的事务
