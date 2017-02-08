@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>集合总结 - 零零碎碎，点点积累</title>
+  <title>HTTPS改造 - 零零碎碎，点点积累</title>
   <meta name="author" content="sunninghai">
 
   
-  <meta name="description" content="Java 集合总结 原文地址：
-花钱的年华 关于Java集合的小抄 ">
+  <meta name="description" content="参考 关于启用 HTTPS 的一些经验分享 HTTPS 改造初探 为何从http改造成https 直接原因：iOS APP 强制使用HTTPS 间接原因： HTTPS 相比HTTP 更加安全；
+HTTPS 是未来的趋势 https改造知识 何为Mixed Content &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://sunninghai.github.io/blog/2017/01/24/ji-he-zong-jie/">
+  <link rel="canonical" href="http://sunninghai.github.io/blog/2017/02/07/httpsgai-zao/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="零零碎碎，点点积累" type="application/atom+xml">
@@ -67,7 +67,7 @@
   
   <header>
     
-      <h1 class="entry-title">集合总结</h1>
+      <h1 class="entry-title">HTTPS改造</h1>
     
     
       <p class="meta">
@@ -76,19 +76,89 @@
 
 
 
-<time class='entry-date' datetime='2017-01-24T16:21:56+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>4:21 pm</span></time>
+<time class='entry-date' datetime='2017-02-07T17:50:04+08:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>5:50 pm</span></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h2>Java 集合总结</h2>
+<div class="entry-content"><p>参考</p>
 
-<p>原文地址：
-<a href="http://calvin1978.blogcn.com/articles/collection.html">花钱的年华 关于Java集合的小抄</a></p>
+<p><a href="https://imququ.com/post/sth-about-switch-to-https.html#toc-3">关于启用 HTTPS 的一些经验分享</a></p>
 
-<p><img src="../images/%E9%9B%86%E5%90%88%E7%9B%B8%E5%85%B3.png" alt="总结图片" /></p>
+<p><a href="https://segmentfault.com/a/1190000005950801">HTTPS 改造初探</a></p>
+
+<h2>为何从http改造成https</h2>
+
+<p>直接原因：iOS APP 强制使用HTTPS</p>
+
+<p>间接原因：</p>
+
+<ul>
+<li>HTTPS 相比HTTP 更加安全；</li>
+<li>HTTPS 是未来的趋势</li>
+</ul>
+
+
+<h2>https改造知识</h2>
+
+<p>何为Mixed Content</p>
+
+<p>HTTPS网页中加载的HTTP资源称之为Mixed Content（混合内容），不同浏览器对这些内容处理规则不一致。</p>
+
+<p>W3C Mixed Content 规范，将其分为Optionally-blockable和Blockable 两类，顾名思义前者可以被浏览器加载，后者不能被加载</p>
+
+<p>Optionally-blockable 资源主要包括：
+\<img> \<video> \<audio> \<source>等标签，除此之外都是Blockable的.</p>
+
+<p>但浏览器的区别可能会不支持上述规范。</p>
+
+<p>最佳实践：HTTPS页面中不要出现Mixed Content 资源。</p>
+
+<h2>https改造过程</h2>
+
+<p>具体改造主要涉及到前端、后端、运维。</p>
+
+<h3>后端改造</h3>
+
+<p>由于API层不暴露在公网中，是通过RPC调用的，还是采用HTTP进行调用；</p>
+
+<p>涉及到的改造主要是代码层面的修改包含：</p>
+
+<ul>
+<li>CDN 配置由HTTP 修改为HTTPS (前提CDN支持HTTPS)</li>
+<li>云存储OSS 配置由HTTP 修改为HTTPS</li>
+<li>文档预览服务 配置由HTTP 修改为HTTPS</li>
+<li>数据库富文本中的相关HTTP 替换为HTTPS</li>
+<li>其他第三方服务HTTP 替换为HTTPS</li>
+</ul>
+
+
+<h3>前端改造</h3>
+
+<p>主要是修改显式写明http的地方，采用 // 访问，让浏览器自动适配</p>
+
+<h3>运维配置</h3>
+
+<p>运维配置由专门的运维人员进行配置，只知道个大概，有些优化也不知道做了没有</p>
+
+<p>首先需要购买HTTPS 证书，我们买的是Go Daddy 的证书，开始买的是
+证书只支持二级域名，我们有服务配置了三级域名，只能重新购买，需要注意。</p>
+
+<p>由于CDN 使用我们自己的域名进行访问，我们的方式比较简单直接把锅甩给了CDN,把我们的证书给他们让他们进行了配置；上面的文章说可以通过 Keyless SSL解决</p>
+
+<p>在 HTTPS 性能上，可以做的几个优化：</p>
+
+<ul>
+<li>开启 SPDY 和 HTTP2 支持，借助多路复用提升传输性能。</li>
+<li>开启会话复用，减少 TLS 握手的时间与性能消耗。</li>
+<li>开启 HSTS，强制 HTTPS 访问，减少与服务端的交互。</li>
+<li>配置完整的证书链，离线完成证书的链式认证。</li>
+<li>开启 OCSP stapling，离线完成证书在线状态检测。</li>
+<li>进行域名收敛</li>
+</ul>
+
 </div>
 
 
@@ -104,21 +174,15 @@
 
 
 
-<time class='entry-date' datetime='2017-01-24T16:21:56+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>4:21 pm</span></time>
+<time class='entry-date' datetime='2017-02-07T17:50:04+08:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>5:50 pm</span></time>
       
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/java/'>java</a>
-  
-</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://sunninghai.github.io/blog/2017/01/24/ji-he-zong-jie/" data-via="" data-counturl="http://sunninghai.github.io/blog/2017/01/24/ji-he-zong-jie/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://sunninghai.github.io/blog/2017/02/07/httpsgai-zao/" data-via="" data-counturl="http://sunninghai.github.io/blog/2017/02/07/httpsgai-zao/" >Tweet</a>
   
   
   
@@ -127,10 +191,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2017/01/10/mysql-si-suo-xiang-guan/" title="Previous Post: mysql 死锁相关">&laquo; mysql 死锁相关</a>
+        <a class="basic-alignment left" href="/blog/2017/02/07/xian-xiang-mu-hou-duan-jia-gou-zong-jie/" title="Previous Post: 现项目后端架构总结">&laquo; 现项目后端架构总结</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2017/02/03/happy-new-year/" title="Next Post: IDEA常用快捷键">IDEA常用快捷键 &raquo;</a>
       
     </p>
   </footer>

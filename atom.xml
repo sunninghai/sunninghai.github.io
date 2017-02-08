@@ -4,7 +4,7 @@
   <title><![CDATA[零零碎碎，点点积累]]></title>
   <link href="http://sunninghai.github.io/atom.xml" rel="self"/>
   <link href="http://sunninghai.github.io/"/>
-  <updated>2017-02-04T18:12:25+08:00</updated>
+  <updated>2017-02-08T10:43:26+08:00</updated>
   <id>http://sunninghai.github.io/</id>
   <author>
     <name><![CDATA[sunninghai]]></name>
@@ -12,6 +12,101 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[HTTPS改造]]></title>
+    <link href="http://sunninghai.github.io/blog/2017/02/07/httpsgai-zao/"/>
+    <updated>2017-02-07T17:50:04+08:00</updated>
+    <id>http://sunninghai.github.io/blog/2017/02/07/httpsgai-zao</id>
+    <content type="html"><![CDATA[<p>参考</p>
+
+<p><a href="https://imququ.com/post/sth-about-switch-to-https.html#toc-3">关于启用 HTTPS 的一些经验分享</a></p>
+
+<p><a href="https://segmentfault.com/a/1190000005950801">HTTPS 改造初探</a></p>
+
+<h2>为何从http改造成https</h2>
+
+<p>直接原因：iOS APP 强制使用HTTPS</p>
+
+<p>间接原因：</p>
+
+<ul>
+<li>HTTPS 相比HTTP 更加安全；</li>
+<li>HTTPS 是未来的趋势</li>
+</ul>
+
+
+<h2>https改造知识</h2>
+
+<p>何为Mixed Content</p>
+
+<p>HTTPS网页中加载的HTTP资源称之为Mixed Content（混合内容），不同浏览器对这些内容处理规则不一致。</p>
+
+<p>W3C Mixed Content 规范，将其分为Optionally-blockable和Blockable 两类，顾名思义前者可以被浏览器加载，后者不能被加载</p>
+
+<p>Optionally-blockable 资源主要包括：
+\<img> \<video> \<audio> \<source>等标签，除此之外都是Blockable的.</p>
+
+<p>但浏览器的区别可能会不支持上述规范。</p>
+
+<p>最佳实践：HTTPS页面中不要出现Mixed Content 资源。</p>
+
+<h2>https改造过程</h2>
+
+<p>具体改造主要涉及到前端、后端、运维。</p>
+
+<h3>后端改造</h3>
+
+<p>由于API层不暴露在公网中，是通过RPC调用的，还是采用HTTP进行调用；</p>
+
+<p>涉及到的改造主要是代码层面的修改包含：</p>
+
+<ul>
+<li>CDN 配置由HTTP 修改为HTTPS (前提CDN支持HTTPS)</li>
+<li>云存储OSS 配置由HTTP 修改为HTTPS</li>
+<li>文档预览服务 配置由HTTP 修改为HTTPS</li>
+<li>数据库富文本中的相关HTTP 替换为HTTPS</li>
+<li>其他第三方服务HTTP 替换为HTTPS</li>
+</ul>
+
+
+<h3>前端改造</h3>
+
+<p>主要是修改显式写明http的地方，采用 // 访问，让浏览器自动适配</p>
+
+<h3>运维配置</h3>
+
+<p>运维配置由专门的运维人员进行配置，只知道个大概，有些优化也不知道做了没有</p>
+
+<p>首先需要购买HTTPS 证书，我们买的是Go Daddy 的证书，开始买的是
+证书只支持二级域名，我们有服务配置了三级域名，只能重新购买，需要注意。</p>
+
+<p>由于CDN 使用我们自己的域名进行访问，我们的方式比较简单直接把锅甩给了CDN,把我们的证书给他们让他们进行了配置；上面的文章说可以通过 Keyless SSL解决</p>
+
+<p>在 HTTPS 性能上，可以做的几个优化：</p>
+
+<ul>
+<li>开启 SPDY 和 HTTP2 支持，借助多路复用提升传输性能。</li>
+<li>开启会话复用，减少 TLS 握手的时间与性能消耗。</li>
+<li>开启 HSTS，强制 HTTPS 访问，减少与服务端的交互。</li>
+<li>配置完整的证书链，离线完成证书的链式认证。</li>
+<li>开启 OCSP stapling，离线完成证书在线状态检测。</li>
+<li>进行域名收敛</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[现项目后端架构总结]]></title>
+    <link href="http://sunninghai.github.io/blog/2017/02/07/xian-xiang-mu-hou-duan-jia-gou-zong-jie/"/>
+    <updated>2017-02-07T15:18:59+08:00</updated>
+    <id>http://sunninghai.github.io/blog/2017/02/07/xian-xiang-mu-hou-duan-jia-gou-zong-jie</id>
+    <content type="html"><![CDATA[<p>粗略架构图如下图所示：</p>
+
+<p><img src="../images/%E6%9E%B6%E6%9E%84%E5%9B%BE.png" alt="架构图" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[代码中特殊的注释]]></title>

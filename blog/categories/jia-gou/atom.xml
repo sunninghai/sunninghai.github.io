@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 架构 | 零零碎碎，点点积累]]></title>
+  <link href="http://sunninghai.github.io/blog/categories/jia-gou/atom.xml" rel="self"/>
+  <link href="http://sunninghai.github.io/"/>
+  <updated>2017-02-08T10:43:26+08:00</updated>
+  <id>http://sunninghai.github.io/</id>
+  <author>
+    <name><![CDATA[sunninghai]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[现项目后端架构总结]]></title>
+    <link href="http://sunninghai.github.io/blog/2017/02/07/xian-xiang-mu-hou-duan-jia-gou-zong-jie/"/>
+    <updated>2017-02-07T15:18:59+08:00</updated>
+    <id>http://sunninghai.github.io/blog/2017/02/07/xian-xiang-mu-hou-duan-jia-gou-zong-jie</id>
+    <content type="html"><![CDATA[<p>粗略架构图如下图所示：</p>
+
+<p><img src="../images/%E6%9E%B6%E6%9E%84%E5%9B%BE.png" alt="架构图" /></p>
+]]></content>
+  </entry>
+  
+</feed>
