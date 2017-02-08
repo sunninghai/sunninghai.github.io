@@ -4,7 +4,7 @@
   <title><![CDATA[零零碎碎，点点积累]]></title>
   <link href="http://sunninghai.github.io/atom.xml" rel="self"/>
   <link href="http://sunninghai.github.io/"/>
-  <updated>2017-02-08T17:38:53+08:00</updated>
+  <updated>2017-02-08T18:06:29+08:00</updated>
   <id>http://sunninghai.github.io/</id>
   <author>
     <name><![CDATA[sunninghai]]></name>
@@ -25,6 +25,9 @@
 <p><a href="https://segmentfault.com/a/1190000005950801">HTTPS 改造初探</a></p>
 
 <h2>为何从http改造成https</h2>
+
+<!--more-->
+
 
 <p>直接原因：iOS APP 强制使用HTTPS</p>
 
