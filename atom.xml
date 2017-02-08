@@ -4,7 +4,7 @@
   <title><![CDATA[零零碎碎，点点积累]]></title>
   <link href="http://sunninghai.github.io/atom.xml" rel="self"/>
   <link href="http://sunninghai.github.io/"/>
-  <updated>2017-02-08T10:43:26+08:00</updated>
+  <updated>2017-02-08T17:38:53+08:00</updated>
   <id>http://sunninghai.github.io/</id>
   <author>
     <name><![CDATA[sunninghai]]></name>
@@ -45,7 +45,7 @@
 <p>W3C Mixed Content 规范，将其分为Optionally-blockable和Blockable 两类，顾名思义前者可以被浏览器加载，后者不能被加载</p>
 
 <p>Optionally-blockable 资源主要包括：
-\<img> \<video> \<audio> \<source>等标签，除此之外都是Blockable的.</p>
+&lt;img&gt; &lt;video&gt; &lt;audio&gt; &lt;source&gt;等标签，除此之外都是Blockable的.</p>
 
 <p>但浏览器的区别可能会不支持上述规范。</p>
 
