@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Mysql - 零零碎碎，点点积累</title>
+  <title>对照阿里Java开发规范 - 零零碎碎，点点积累</title>
   <meta name="author" content="sunninghai">
 
   
-  <meta name="description" content="Category: mysql">
+  <meta name="description" content="阿里Java开发规范 对照阿里Java开发规范，有些自己没注意的地方： 使用索引访问用 String 的 split 方法得到的数组时，需做最后一个分隔符后有无内 容的检查，否则会有抛 IndexOutOfBoundsException 的风险 String str ="a,b,c,,"; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://sunninghai.github.io/blog/categories/mysql/">
+  <link rel="canonical" href="http://sunninghai.github.io/blog/2017/02/09/a-li-javakai-fa-gui-fan/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="零零碎碎，点点积累" type="application/atom+xml">
@@ -62,63 +62,86 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Mysql</h1>
+    
+      <h1 class="entry-title">对照阿里Java开发规范</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2017-02-09T16:25:15+08:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>9</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>4:25 pm</span></time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p><a href="../images/eb0998bac7664496b2f1af98e07b08e5-Java.pdf">阿里Java开发规范</a></p>
 
-  
-  <h2>2017</h2>
+<p>对照阿里Java开发规范，有些自己没注意的地方：</p>
 
-<article>
-  
-<h1><a href="/blog/2017/01/10/mysql-si-suo-xiang-guan/">Mysql 死锁相关</a></h1>
-<time datetime="2017-01-10T10:33:18+08:00" pubdate><span class='month'>Jan</span> <span class='day'>10</span> <span class='year'>2017</span></time>
+<ul>
+<li><p>使用索引访问用 String 的 split 方法得到的数组时，需做最后一个分隔符后有无内 容的检查，否则会有抛 IndexOutOfBoundsException 的风险</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/mysql/'>mysql</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2017/01/06/mysqlsuo-xiang-guan/">Mysql锁相关</a></h1>
-<time datetime="2017-01-06T15:38:29+08:00" pubdate><span class='month'>Jan</span> <span class='day'>06</span> <span class='year'>2017</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/mysql/'>mysql</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2017/01/03/mysqlzhu-yi/">Mysql注意</a></h1>
-<time datetime="2017-01-03T19:25:28+08:00" pubdate><span class='month'>Jan</span> <span class='day'>03</span> <span class='year'>2017</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/mysql/'>mysql</a></span>
-</footer>
-
-
-</article>
+<pre><code>  String str ="a,b,c,,";
+  String[] ary=str.split(",");
+  //预期输出4，运行结果为3
+  System.out.println(ary.lenght);
+</code></pre></li>
+<li><p>ArrayList 的 subList 结果不可强转成 ArrayList，否则会抛出 ClassCastException 异常:java.util.RandomAccessSubList cannot be cast to java.util.ArrayList ; 说明:subList 返回的是 ArrayList 的内部类 SubList，并不是 ArrayList ，而是 ArrayList 的一个视图，对于 SubList 子列表的所有操作最终会反映到原列表上</p></li>
+<li>在 JDK7 版本以上，Comparator 要满足自反性，传递性，对称性，不然 Arrays.sort， Collections.sort 会报 IllegalArgumentException 异常。说明:1) 自反性:x，y 的比较结果和 y，x 的比较结果相反。 2) 传递性:x>y,y>z,则 x>z。3) 对称性:x=y,则 x,z 比较结果和 y，z 比较结果相同。  反例:下例中没有处理相等的情况，实际使用中可能会出现异常:<br/>
+      new Comparator<Student>() {         @Override           public int compare(Student o1, Student o2) {                return o1.getId() > o2.getId() ? 1 : -1;        } }</li>
+</ul>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">sunninghai</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2017-02-09T16:25:15+08:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>9</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>4:25 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/code/'>code</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://sunninghai.github.io/blog/2017/02/09/a-li-javakai-fa-gui-fan/" data-via="" data-counturl="http://sunninghai.github.io/blog/2017/02/09/a-li-javakai-fa-gui-fan/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2017/02/07/httpsgai-zao/" title="Previous Post: HTTPS改造">&laquo; HTTPS改造</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>
